@@ -19,6 +19,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
+    <?php if (isset($this->options->customHTMLInHeadTitle)) echo $this->options->customHTMLInHeadTitle ?>
     <link rel="dns-prefetch" href="//static.misaka.xin">
     <title><?php $this->archiveTitle(array(
             'category'  =>  _t('分类 %s 下的文章'),
