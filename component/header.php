@@ -19,6 +19,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
+    <link rel="dns-prefetch" href="//static.misaka.xin">
     <title><?php $this->archiveTitle(array(
             'category'  =>  _t('分类 %s 下的文章'),
             'search'    =>  _t('包含关键字 %s 的文章'),
@@ -30,15 +31,7 @@
     <style>
         .image-logo{background-image:url(<?php $this->options->themeUrl('assets/images/logo.png'); ?>)}body.mu .image-logo{background-image:url(<?php $this->options->themeUrl('assets/images/logo_black.png'); ?>)}.image-icon{background-image:url(<?php $this->options->themeUrl('assets/images/logo_min.png'); ?>)}
     </style>
-
-    <script>
-        window['Page'] = {
-            SITEURL: '{{@blog.url}}',
-            MAXPAGES: parseInt ('{{#if pagination.pages}}{{pagination.pages}}{{else}}0{{/if}}'),
-            DISQUS_SHORT_NAME: 'zuimoe'
-        }
-    </script>
-
+    <?php if (isset($this->options->customHTMLInHeadBottom)) echo $this->options->customHTMLInHeadBottom ?>
     <?php $this->header(); ?>
 </head>
 <body class="loading">
