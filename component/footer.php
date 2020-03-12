@@ -11,6 +11,7 @@
     <script src="<?php $this->options->themeUrl('assets/js/jquery.min.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('assets/js/plugin.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('assets/js/Diaspora.js'); ?>"></script>
+    <?php if (isset($this->options->beforeBodyClose)) echo $this->options->beforeBodyClose ?>
     <?php $this->footer(); ?>
 </body>
 </html>
