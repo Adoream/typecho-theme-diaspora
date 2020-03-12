@@ -4,8 +4,8 @@
  * @Author: Jin
  * @Date: 2020-03-11 13:09:33
  * @LastEditors: Jin
- * @LastEditTime: 2020-03-12 13:22:54
- * @FilePath: /diaspora/lib/Diaspora.php
+ * @LastEditTime: 2020-03-12 23:17:56
+ * @FilePath: /diaspora/Users/sora/Developer/Theme/Typecho/Diaspora/lib/Diaspora.php
  */
 class Diaspora {
     public static $version = "2.0.0";
@@ -44,7 +44,10 @@ class Diaspora {
     .settings-title {
         font-size: 2em;
         border-bottom: 1px #ddd solid;
-        /* padding-top:2em; */
+        padding-top:1em;
+    }
+    .typecho-option:first-of-type {
+        margin-top: -2em;
     }
     ul.typecho-option.typecho-option-submit {
         position:fixed;
