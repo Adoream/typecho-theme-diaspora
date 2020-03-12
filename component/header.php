@@ -4,8 +4,8 @@
  * @Author: Jin
  * @Date: 2020-03-11 12:20:51
  * @LastEditors: Jin
- * @LastEditTime: 2020-03-12 13:14:16
- * @FilePath: /diaspora/component/header.php
+ * @LastEditTime: 2020-03-12 23:12:46
+ * @FilePath: /diaspora/Users/sora/Developer/Theme/Typecho/Diaspora/component/header.php
  */
 ?>
 <!DOCTYPE html>
@@ -19,8 +19,6 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
-    <?php if (isset($this->options->customHTMLInHeadTitle)) echo $this->options->customHTMLInHeadTitle ?>
-    <link rel="dns-prefetch" href="//static.misaka.xin">
     <title><?php $this->archiveTitle(array(
             'category'  =>  _t('分类 %s 下的文章'),
             'search'    =>  _t('包含关键字 %s 的文章'),
@@ -28,11 +26,15 @@
             'author'    =>  _t('%s 发布的文章')
         ), '', ' - '); ?><?php $this->options->title(); ?></title>
     <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/css/Diaspora.css'); ?>">
-
+    <script>
+        window['LocalConst'] = {
+            MAX_PAGES: <?php echo ceil($this->getTotal() / $this->parameter->pageSize) ?>
+        };
+    </script>
     <style>
         .image-logo{background-image:url(<?php $this->options->themeUrl('assets/images/logo.png'); ?>)}body.mu .image-logo{background-image:url(<?php $this->options->themeUrl('assets/images/logo_black.png'); ?>)}.image-icon{background-image:url(<?php $this->options->themeUrl('assets/images/logo_min.png'); ?>)}
     </style>
-    <?php if (isset($this->options->customHTMLInHeadBottom)) echo $this->options->customHTMLInHeadBottom ?>
+
     <?php $this->header(); ?>
 </head>
 <body class="loading">
@@ -42,6 +44,7 @@
         <ul id="menu-menu" class="menu">
             <?php $this->need('component/navigation.php'); ?>
         </ul>
+        <p id="hitokoto"></p>
         <p>&copy; <?php echo date("Y") ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>. Proudly published with <a href="https://typecho.org">Typecho</a></p>
     </div>
 
