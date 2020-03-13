@@ -4,7 +4,7 @@
  * @Author: Jin
  * @Date: 2020-03-11 12:20:51
  * @LastEditors: Jin
- * @LastEditTime: 2020-03-13 09:22:18
+ * @LastEditTime: 2020-03-13 09:29:29
  * @FilePath: /Diaspora/component/header.php
  */
 ?>
@@ -46,7 +46,7 @@
             <?php $this->need('component/navigation.php'); ?>
         </ul>
         <p id="hitokoto"></p>
-        <p>&copy; <?php echo date("Y") ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>. Proudly published with <a href="https://typecho.org">Typecho</a></p>
+        <p>&copy; <?php echo date("Y") ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>. Proudly published with <a rel="external nofollow" href="https://typecho.org">Typecho</a>. Theme <a href="https://github.com/LoeiFy/Diaspora">Diaspora</a> Modified by <a href="https://jcl.moe">Jin</a>.</p>
     </div>
 
 <?php }?>
