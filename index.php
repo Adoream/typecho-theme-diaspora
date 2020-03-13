@@ -2,7 +2,7 @@
 /**
  * 一款基于WP移植的 Typecho 主题，适合喜欢摄影，影评，乐评和玩弄文字的你，干净，清新； 响应式，Ajax，更多好玩的等你来发现。
  * 
- * @package Typecho Default Theme 
+ * @package Diaspora
  * @author Jin
  * @version 1.0.0
  * @link https://jcl.moe
