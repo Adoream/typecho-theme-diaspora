@@ -4,8 +4,8 @@
  * @Author: Jin
  * @Date: 2020-03-11 12:19:13
  * @LastEditors: Jin
- * @LastEditTime: 2020-03-12 22:12:27
- * @FilePath: /diaspora/page.php
+ * @LastEditTime: 2020-03-13 09:03:16
+ * @FilePath: /Diaspora/page.php
  */
 ?>
 <div id="single" class="page">
@@ -21,23 +21,7 @@
                 </div>
                 
                 <div class="comment-wrap">
-                    <div id="comments" class="comments-area">
-                        <h2>评论列表</h2>
-
-                        <ol class="comment-list">
-                            <?php $this->comments()->to($comments); ?>
-                            <?php while($comments->next()): ?>
-                                <li id="comment <?php $comments->theId(); ?>">
-                                    <div class="comment-body">
-                                            <?php echo $comments->sequence(); ?>. 
-                                            <strong><?php $comments->author(); ?></strong>
-                                            on <?php $comments->date('F jS, Y'); ?> at <?php $comments->date('h:i a'); ?>
-                                        </div>
-                                    <p><?php $comments->content(); ?></p>
-                                </li>
-                            <?php endwhile; ?>
-                        </ol>
-                    </div>
+                    <?php $this->need('component/comments.php'); ?>                    
                 </div>
             </div>
         </div>
