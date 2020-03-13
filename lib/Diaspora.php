@@ -4,8 +4,8 @@
  * @Author: Jin
  * @Date: 2020-03-11 13:09:33
  * @LastEditors: Jin
- * @LastEditTime: 2020-03-12 23:17:56
- * @FilePath: /diaspora/Users/sora/Developer/Theme/Typecho/Diaspora/lib/Diaspora.php
+ * @LastEditTime: 2020-03-13 09:22:00
+ * @FilePath: /Diaspora/lib/Diaspora.php
  */
 class Diaspora {
     public static $version = "2.0.0";
@@ -33,6 +33,10 @@ class Diaspora {
             }
         }
         return false;
+    }
+
+    public static function getPageSize () {
+        return self::$options->pageSize;
     }
     
     public static function welcome () {

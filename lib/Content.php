@@ -22,7 +22,7 @@ class Content {
                 Diaspora_Const::STATIC_URL . '/Background/68.png',
                 Diaspora_Const::STATIC_URL . '/Background/70.jpg'
             ];
-            $image = ($covers) ? mb_split("\n", $covers) : (Diaspora::$options->themeOptions->defaultThumbnails) ? mb_split("\n", Diaspora::$options->themeOptions->defaultThumbnails) : $imageList;
+            $image = ($covers) ? mb_split("\n", $covers) : (Diaspora::$options->defaultThumbnails) ? mb_split("\n", Diaspora::$options->defaultThumbnails) : $imageList;
             $cid = intval($cid);
             $index = abs($cid) % count($image);
             $cover = $image[$index];
