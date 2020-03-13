@@ -4,10 +4,11 @@
  * @Author: Jin
  * @Date: 2020-03-11 12:21:11
  * @LastEditors: Jin
- * @LastEditTime: 2020-03-12 13:43:32
- * @FilePath: /diaspora/component/footer.php
+ * @LastEditTime: 2020-03-13 09:10:48
+ * @FilePath: /Diaspora/component/footer.php
  */
 ?>
+<?php if (!Diaspora::isAjax()) { ?>
     <script src="<?php $this->options->themeUrl('assets/js/jquery.min.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('assets/js/plugin.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('assets/js/Diaspora.js'); ?>"></script>
@@ -15,3 +16,4 @@
     <?php $this->footer(); ?>
 </body>
 </html>
+<?php } ?>

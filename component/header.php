@@ -4,10 +4,11 @@
  * @Author: Jin
  * @Date: 2020-03-11 12:20:51
  * @LastEditors: Jin
- * @LastEditTime: 2020-03-12 23:12:46
- * @FilePath: /diaspora/Users/sora/Developer/Theme/Typecho/Diaspora/component/header.php
+ * @LastEditTime: 2020-03-13 09:22:18
+ * @FilePath: /Diaspora/component/header.php
  */
 ?>
+<?php if (!Diaspora::isAjax()) { ?>
 <!DOCTYPE html>
 <html class="loading">
 <head>
@@ -28,7 +29,7 @@
     <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/css/Diaspora.css'); ?>">
     <script>
         window['LocalConst'] = {
-            MAX_PAGES: <?php echo ceil($this->getTotal() / $this->parameter->pageSize) ?>
+            MAX_PAGES: <?php echo Diaspora::getPageSize() ?>
         };
     </script>
     <style>
@@ -48,3 +49,4 @@
         <p>&copy; <?php echo date("Y") ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>. Proudly published with <a href="https://typecho.org">Typecho</a></p>
     </div>
 
+<?php }?>
