@@ -53,5 +53,5 @@
 <head>
 
 <div id="top" style="display: block;">
-	<a href= "/"> <!-- 单独打开跳转主页而不是javascript:history.back这样返回上一页 -->
+	<a href= "/"> <!-- 单独打开跳转主页而不是javascript:history.back -->
 <img border="0" src="/usr/themes/Diaspora-Typecho-master/assets/images/logo_min.svg"width="24" height="24" style="position:relative;top:14px;left:14px;"></a>   </div>
