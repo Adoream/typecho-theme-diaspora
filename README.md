@@ -10,9 +10,7 @@
 
 > 感谢原作者创作出如此精美的主题 [@Loeify](https://github.com/LoeiFy/Diaspora)
 
-
-
-更新
-css里将logo.png与logo_black.png合并为了精灵图，更新前点击menu后会有延迟
-添加了友情链接和时间线模板
-修复一些小bug
+### 更新
+- css里将logo.png与logo_black.png合并为了精灵图，更新前点击menu后会有延迟
+- 添加了友情链接和时间线模板
+- 修复一些小bug
