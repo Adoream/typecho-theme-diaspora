@@ -267,21 +267,6 @@ let Diaspora = {
         }
     },
 
-    getHitokoto: function () {
-        $.ajax({
-            type: "GET",
-            url: "https://api.aim.moe/Common/Hitokoto",
-            dataType: "json",
-            cache: false,
-            success: function (t) {
-                if (t.data) {
-                    $("#hitokoto").html(t.data.text)
-                } else {
-                    $("#hitokoto").html("读取数据失败了的说…… _(:з」∠)_")
-                }
-            }
-        })
-    },
 
     bindAjaxComment: function () {
         let htmlEncode = function (value) {
@@ -650,7 +635,6 @@ $(function () {
 
             // nav menu
             case (tag.indexOf('switchmenu') != -1):
-                Diaspora.getHitokoto()
                 window.scrollTo(0, 0)
                 $('html, body').toggleClass('mu')
                 break;

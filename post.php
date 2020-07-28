@@ -9,7 +9,6 @@
  */
 ?>
 <?php $this->need('component/header.php'); ?>
-
 <div id="single" data-id="<?php $this->cid(); ?>">
     <div id="top">
         <div class="bar"></div>
