@@ -4,11 +4,11 @@
  * @Author: Jin
  * @Date: 2020-03-11 13:14:19
  * @LastEditors: Jin
- * @LastEditTime: 2020-03-12 22:12:47
- * @FilePath: /diaspora/lib/Const.php
+ * @LastEditTime: 2020-08-14 13:21:47
+ * @FilePath: /Diaspora/lib/Const.php
  */
 class Diaspora_Const {
-    const STATIC_URL = '//static.misaka.xin';
+    const REMOTE_STATIC_URL = '//static.misaka.xin';
     
     const COMMENT_SYSTEM_EMBED = 0;
 }
