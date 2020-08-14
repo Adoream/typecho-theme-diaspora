@@ -11,9 +11,18 @@
 <?php
 if (ceil($this->getTotal() / $this->parameter->pageSize) > $this->_currentPage) {
 ?>
+<<<<<<< HEAD
     <div id="pager">
         <a href="<?php echo (($this->options->rewrite) ? $this->options->siteUrl : $this->options->siteUrl . 'index.php'); ?>/page/<?php echo (int)($this->_currentPage) + 1 ?>/" data-url="<?php $this->options->siteUrl(); ?>/page/<?php echo (int)($this->_currentPage) + 1 ?>/" class="more">加载更多</a>
     </div>
 <?php
 }
 ?>
+=======
+<div id="pager">
+    <a href="<?php echo (($this->options->rewrite) ? $this->options->siteUrl : $this->options->siteUrl . 'index.php'); ?>/page/<?php echo (int)($this->_currentPage)+1 ?>/" data-url="<?php $this->options->siteUrl(); ?>/page/<?php echo (int)($this->_currentPage)+1 ?>/" class="more">加载更多</a>
+</div>
+<?php 
+    }
+?>
+>>>>>>> c6bd7e7062600aeea042fcef845a650fa90c18eb
