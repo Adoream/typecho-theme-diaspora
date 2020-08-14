@@ -8,7 +8,7 @@
  * @FilePath: /diaspora/lib/Const.php
  */
 class Diaspora_Const {
-    const STATIC_URL = '//static.misaka.xin';
+    const STATIC_URL = '.';
     
     const COMMENT_SYSTEM_EMBED = 0;
 }

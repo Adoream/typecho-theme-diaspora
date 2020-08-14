@@ -1,11 +1,11 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php
-/*
- * @Author: Jin
- * @Date: 2020-03-11 12:19:13
- * @LastEditors: Jin
- * @LastEditTime: 2020-03-13 09:03:16
- * @FilePath: /Diaspora/page.php
+/**
+ * 友情链接独立页面模板
+ * @Date: 2020-04-29 20:06:36
+ * @Author: Bapi
+ * @package custom
+ * @FilePath: /diaspora/page-friend.php
  */
 ?>
 <head>
@@ -34,15 +34,17 @@
     <div id="top">
         <a class="image-icon" href="javascript:history.back()"></a>
     </div>
+    
 
 
     <div class="section" style="left: 0;">
 	    <div class="article">
-            <div>
-                <div class="content">
+                <div>
+			    <ul class="friend">
         		    <?php $this->content(); ?>
+				</ul>
                 </div>
-                
+
                 <div class="comment-wrap">
                     <?php $this->need('component/comments.php'); ?>                    
                 </div>
@@ -51,6 +53,8 @@
     </div>
 </div>
 <head>
+
+
 
 <div id="top" style="display: block;">
 	<a href= "/"> <!-- 单独打开跳转主页而不是javascript:history.back -->

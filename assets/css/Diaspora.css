@@ -94,7 +94,7 @@ body.loading {
 }
 
 body {
-    font-family: "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-family: "Source Han Sans CN","Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     font-size  : 14px;
 }
 
@@ -147,9 +147,21 @@ audio {
     position: relative;
 }
 
+#404 {
+    position: absolute;
+    top     : 500px;
+    width   : 100%;
+}
+
+#404>div {
+    position: absolute;
+    top     : 600px;
+    width   : 80%;
+}
+
 .icon-menu {
     font-size    : 20px;
-    padding      : 6px 6px 5px;
+    padding      : 6px 6px;
     border-radius: 2px;
     cursor       : pointer;
     position     : absolute;
@@ -172,13 +184,27 @@ audio {
     z-index                : 4;
     position               : relative;
     display                : inline-block;
-    -webkit-background-size: 62px 26px;
-    -moz-background-size   : 62px 26px;
-    background-size        : 62px 26px;
+     width                 : 62px;
+    height                 : 26px;
+    -webkit-background-size: 124px 52px;
+    -moz-background-size   : 124px 52px;
+    background-size        : 124px 52px;
     background-repeat      : no-repeat;
-    background-position    : center center;
+    background-position    : -30px 0px;
+   
+}
+
+body.mu .image-logo {
+	z-index                : 4;
+    position               : relative;
+    display                : inline-block;
     width                  : 62px;
     height                 : 26px;
+    -webkit-background-size: 124px 52px;
+    -moz-background-size   : 124px 52px;
+    background-size        : 124px 52px;
+    background-repeat      : no-repeat;
+    background-position    : -30px -26px;
 }
 
 #vibrant {
@@ -415,6 +441,20 @@ body.touch #top {
     top                    : 14px;
 }
 
+.image-icon {
+    -webkit-background-size: 24px 24px;
+    -moz-background-size   : 24px 24px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNy40IDM4LjciPjxkZWZzPjxzdHlsZT4uYXtmaWxsOiMzMzM7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5sb2dvX21pbjwvdGl0bGU+PHBhdGggY2xhc3M9ImEiIGQ9Ik0zMi43LDQxLjFBOS40LDkuNCwwLDAsMSwyOCwzOS45YTMuNywzLjcsMCwwLDEtMS43LTIuNywxMi4zLDEyLjMsMCwwLDEtLjItMi44LDEzLjYsMTMuNiwwLDAsMSwuNS0zLjZsLjItLjktLjcuNi0uNS40YTI1LjksMjUuOSwwLDAsMS0zLjcsMy45bC0yLjEsMS45YTEwLjMsMTAuMywwLDAsMS0yLDEuNSw1LjUsNS41LDAsMCwxLTEuNC45bC0xLjguNWMuMS0uMS4xLS4xLjEtLjJhMjcuMSwyNy4xLDAsMCwxLDMuNi00LjJxMi4xLTIsNC4yLTQuMmwuNi0uOC0uOS4zLTIuOS41YTEuNywxLjcsMCwwLDEtMS4yLS42LDIuOCwyLjgsMCwwLDEtLjctMS41YzAtLjQuMy0uNy44LS45bDUtLjhjMy0uNiw0LjktMS4xLDUuOS0xLjRhMTQuNSwxNC41LDAsMCwxLDIuOC0uNywxLjQsMS40LDAsMCwxLDEsLjUsMS4yLDEuMiwwLDAsMSwuNi45LDEuNSwxLjUsMCwwLDEtMS4zLDEuNGwtMi42LjYuMi4zYy4zLjcsMCwxLjctLjgsMy4xYTE1LDE1LDAsMCwwLS41LDRjLjIsMS43LDEuNCwyLjYsMy43LDIuNmE2LjUsNi41LDAsMCwwLDQuOS0xLjljLjgtLjUsMS4zLTIsMS40LTQuN2wuMy0uNmEzLjEsMy4xLDAsMCwwLC4xLjksMy45LDMuOSwwLDAsMCwxLjUsMi4zYy4zLjMuNiwxLjEuNiwzLjFhOC41LDguNSwwLDAsMC0xLDEuOSwzLjgsMy44LDAsMCwxLTIuMy44QTE2LjksMTYuOSwwLDAsMSwzMi43LDQxLjFaTTUuMiwzNS4yYy0uNSwwLS45LS4xLTEtLjNzLS42LS43LS42LS45YTEuOCwxLjgsMCwwLDEsLjUtMS4yYy40LS41LjYtLjYuNi0uN0g1di0uM2MtLjYtMS4zLS45LTQuMS0uOS04LjFzLjEtNi41LjMtMTAuM0EzNi43LDM2LjcsMCwwLDEsNS4yLDljLjMtLjguNi0xLjMuOS0xLjNhMS43LDEuNywwLDAsMSwxLC41Yy42LjUuNy43LjcuOHYuM2gyLjVjLjYtLjYsMS0uOSwxLjUtLjlhMywzLDAsMCwxLDIuMSwxLDQuOSw0LjksMCwwLDEsLjgsMy4yYzAsNC4zLDAsOC4zLS4xLDExLjl2LjNoLjRhMjAuMiwyMC4yLDAsMCwwLDMuMy0uOWguMlYyMS41SDE3LjJjLS41LDAtLjgtLjEtMS0uNWExLjcsMS43LDAsMCwxLS42LTEuMmMwLS4xLjEtLjMuNC0uNGwxLjUtLjVhNCw0LDAsMCwwLDEuMi0uNGguMWwuMy0xLjJhMy40LDMuNCwwLDAsMSwuNy0xLjVsLjItLjNoLS4zbC0uMy0uMmEyLjEsMi4xLDAsMCwxLS43LTEuNWMwLS42LjQtMSwxLjEtMS4xYTE3LDE3LDAsMCwwLDIuNi0uNWwxLjQtLjJWOS44SDIyYTIuNCwyLjQsMCwwLDEtMS45LS42LDIuMiwyLjIsMCwwLDEtLjgtMS41YzAtLjMuMi0uNS42LS43bDMuNi0uN2guM3YtMUE0LjgsNC44LDAsMCwxLDI0LjQsM2MuNi0uNS45LS42LDEuMS0uNnMuNi4xLDEuNywxLjFhMy4xLDMuMSwwLDAsMSwuNSwxLjJ2LjRIMjhhNy45LDcuOSwwLDAsMSwyLjItLjRoMGExLjQsMS40LDAsMCwxLDEuMS40QTEuNiwxLjYsMCwwLDEsMzIsNi4zYTEuMSwxLjEsMCwwLDEtLjksMUwyNy4zLDguOGgtLjJsLS4zLDEuOHYuNGguNGwyLjMtLjgsMi0uN2MxLjIuMywxLjQuOSwxLjQsMS4zcy0uMS45LS40LDFhMi4yLDIuMiwwLDAsMS0xLjUuOGwtLjYuMy0uOC4yaC0uNGwtMi44LjktNC4zLDEuMS0uMi4ydi4yYTUuMSw1LjEsMCwwLDEsLjIsMS4zdi4yaC4ybC42LjNhMS40LDEuNCwwLDAsMSwuMy45YzAsLjEsMCwuNC0uNy44bC0xLjQuOWgtLjFhMTguMiwxOC4yLDAsMCwwLS41LDJWMjNsLjUtLjIsMS42LS43Yy45LjEsMSwuNSwxLC44YTEsMSwwLDAsMS0uMy44LDIsMiwwLDAsMS0xLjEuNmgtLjFhOC44LDguOCwwLDAsMS0yLjcsMS4xbC0yLjksMS4xLTEuNi40aC0uM3YzLjVjLS4yLDIuOS0xLjEsNC40LTIuNyw0LjRhMSwxLDAsMCwxLTEuMS0xLjFjLjEtLjcuMi0xLjYuMy0yLjZ2LS45bC0uNi43YTE3LjYsMTcuNiwwLDAsMS0zLjQsMy4zQTMuMiwzLjIsMCwwLDEsNS4yLDM1LjJaTTksMTguNWEyLjcsMi43LDAsMCwxLDEuMi4zYy41LjMuNi41LjYuN3MtLjUsMS4zLTEuNiwxLjhhMTAuMSwxMC4xLDAsMCwxLTIuMy43SDYuN3YyLjFjMCwxLjIuMSwzLjIuMSw2LjF2LjVsMi40LTEuNCwyLjEtLjl2LS4yYy4yLTMuOC4zLTkuMS4zLTE1LjUsMC0xLjktLjEtMi4zLS41LTIuM2gtLjJ2LjJzLS4xLjItMS4zLjVsLTEuOS42SDcuNXYuMkE0Ny4xLDQ3LjEsMCwwLDAsNi44LDE5di41bC41LS4zQTMuOSwzLjksMCwwLDEsOSwxOC41Wm0xNy40LDUuNmExLjksMS45LDAsMCwxLTEtLjUsMS40LDEuNCwwLDAsMS0uNS0xLDEuMSwxLjEsMCwwLDEsLjktLjlsMi4yLS4yaC4ybC4yLS44YTEuOSwxLjksMCwwLDAsLjItLjd2LS40SDI3LjNhMiwyLDAsMCwxLTEuNi0uNSwxLjcsMS43LDAsMCwxLS42LTEuMmMwLS4yLjEtLjMuMy0uNWwyLjEtLjQsMS43LS4zdi0uMmE2LjIsNi4yLDAsMCwwLC4yLTEuOGMuMS0uNS4xLS44LjItLjlsLjItLjUuNi4yLDEuMi41YTIuNywyLjcsMCwwLDEsLjgsMS4zdi40bC40LS4yLDEuNi0uM2gwYTEuMiwxLjIsMCwwLDEsLjkuNCwxLDEsMCwwLDEsLjQuOWMwLC4zLDAsLjYtLjcuOGEyOS4yLDI5LjIsMCwwLDEtMy40LDEuM2gtLjJjLS42LDEuOC0uNiwxLjgtLjUsMmguNXYtLjJsNC4zLTEuMWMuOS4xLDEuMS41LDEuMS45YTEuMiwxLjIsMCwwLDEtLjMuOSwyLjcsMi43LDAsMCwxLTEuMi42bC0zLjksMS4xLTMsLjdaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMy42IC0yLjQpIi8+PC9zdmc+);
+    background-size        : 24px 24px;
+    background-position    : center center;
+    background-repeat      : no-repeat;
+    width                  : 24px;
+    height                 : 24px;
+    position               : absolute;
+    left                   : 14px;
+    top                    : 14px;
+}
+
 .subtitle {
     color     : #666;
     font-size : 14px;
@@ -582,15 +622,6 @@ body.mu .icon-logo {
 
 .menu a:hover {
     color: #333;
-}
-
-#hitokoto {
-    color     : #999;
-    font-size : 14px;
-    position  : absolute;
-    width     : 100%;
-    text-align: center;
-    bottom    : 60px;
 }
 
 .nav p {
@@ -1258,13 +1289,33 @@ ol.children li {
     width: 50%;
 }
 
-.nav-links .nav-next {
+.page-navigator {
+    margin-top: 20px;
+    overflow  : hidden;
+}
+
+.page-navigator div {
+    float: left;
+    width: 50%;
+}
+
+.page-navigator .next {
     float     : right;
     text-align: right;
 }
 
-.nav-links a {
+.page-navigator a {
     color: #EF6D57;
+}
+
+
+.page-navigator li.prev,
+.page-navigator li.next{
+    display: inline-block;
+}
+
+.page-navigator li {
+    display: none;;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1280,6 +1331,13 @@ ol.children li {
     #post0 h2 {
         font-size: 24px;
     }
+	
+	.else h3+div p {
+        color      : #555 ;
+        margin     : 10px 100px 10px 60px !important;
+        font-size  : 14px ;
+        line-height: 1.8 ;
+    }
 
     .post {
         width: 900px;
@@ -1288,6 +1346,12 @@ ol.children li {
     .post>a {
         width : 480px;
         height: 310px;
+    }
+	
+    #post0 .summary p {
+    color     : #fff;
+    font-size : 14px;
+    margin-top: 10px;
     }
 
     .else {
@@ -1325,6 +1389,13 @@ ol.children li {
 }
 
 @media screen and (max-width: 900px) {
+	html.mu,
+    body.mu,
+    body.touch.mu{    
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+	
     #mark {
         height: 480px;
     }
@@ -1345,6 +1416,13 @@ ol.children li {
 
     #post0 h2 {
         font-size: 20px;
+    }
+	
+	.else h3+div p {
+        color      : #555 ;
+        margin     : 10px 20px 10px 20px !important;
+        font-size  : 14px ;
+        line-height: 1.8 ;
     }
 
     .post {
@@ -1395,6 +1473,13 @@ ol.children li {
 }
 
 @media screen and (max-width: 780px) {
+	html.mu,
+    body.mu,
+    body.touch.mu{    
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+	
     #header {
         top: 40px;
     }
@@ -1419,7 +1504,7 @@ ol.children li {
     }
 
     .menu {
-        width : 80%;
+        width : 100%;
         margin: 160px auto 0;
     }
 
@@ -1472,6 +1557,7 @@ ol.children li {
     }
 }
 
+/*
 @media screen and (max-width: 480px) {
     #post0 p:first-child {
         display: none;
@@ -1509,7 +1595,7 @@ ol.children li {
         display: none;
     }
 }
-
+*/
 
 
 @font-face {
@@ -1642,4 +1728,28 @@ pre code {
 
 .stuff span span {
     margin-right: 0px !important;
+}
+
+/* 滚动条 */
+
+::-webkit-scrollbar-track-piece {
+    background-color: #fff; /*滚动条的背景颜色*/
+    -webkit-border-radius: 0; /*滚动条的圆角宽度*/
+}
+::-webkit-scrollbar {
+    width: 8px; /*滚动条的宽度*/
+    height: 500px; /*滚动条的高度*/
+}
+::-webkit-scrollbar-thumb:vertical { /*垂直滚动条的样式*/
+    height: 70%;
+    background-color: #7e5cac;
+    -webkit-border-radius: 3px;
+    outline: 1px solid #fff;
+    outline-offset: -1px;
+    border: 2px solid #fff;
+}
+::-webkit-scrollbar-thumb:hover { /*滚动条的hover样式*/
+    height: 70%;
+    background-color: #9f9f9f;
+    -webkit-border-radius: 4px;
 }
