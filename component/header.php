@@ -8,7 +8,6 @@
  * @FilePath: /Diaspora/component/header.php
  */
 ?>
-
 <?php if (!Diaspora::isAjax()) { ?>
 <!DOCTYPE html>
 <html class="loading">
@@ -34,7 +33,7 @@
         };
     </script>
     <style>
-        .image-logo{background-image:url(<?php $this->options->themeUrl('assets/images/smoe.svg'); ?>)}body.mu .image-logo{background-image:url(<?php $this->options->themeUrl('assets/images/smoe.svg'); ?>)}.image-icon{background-image:url(<?php $this->options->themeUrl('assets/images/logo_min.svg'); ?>)}
+        .image-logo{background-image:url(<?php $this->options->themeUrl('assets/images/logo.png'); ?>)}body.mu .image-logo{background-image:url(<?php $this->options->themeUrl('assets/images/logo_black.png'); ?>)}.image-icon{background-image:url(<?php $this->options->themeUrl('assets/images/logo_min.png'); ?>)}
     </style>
 
     <?php $this->header(); ?>
@@ -46,6 +45,7 @@
         <ul id="menu-menu" class="menu">
             <?php $this->need('component/navigation.php'); ?>
         </ul>
+        <p id="hitokoto"></p>
         <p>&copy; <?php echo date("Y") ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>. Proudly published with <a rel="external nofollow" href="https://typecho.org">Typecho</a>. Theme <a href="https://github.com/LoeiFy/Diaspora">Diaspora</a> Modified by <a href="https://jcl.moe">Jin</a>.</p>
     </div>
 

@@ -32,7 +32,7 @@ function themeConfig ($form) {
     echo Diaspora::welcome();
          
     $form->addInput(new Title('imageTitle', NULL, NULL, _t('配图及图像管理'), NULL));
-    $defaultThumbnails = new Typecho_Widget_Helper_Form_Element_Textarea('defaultThumbnails', NULL, NULL, _t('默认背景图列表'), _t(', 每行填写一个链接（自动换行的视为同一行），在文章没有配置文章主图的时候，将会从这里挑选一张图片进行显示。'));
+    $defaultThumbnails = new Typecho_Widget_Helper_Form_Element_Textarea('defaultThumbnails', NULL, NULL, _t('默认背景图列表'), _t('在这里填入图片的URL地址, 每行填写一个链接（自动换行的视为同一行），在文章没有配置文章主图的时候，将会从这里挑选一张图片进行显示。'));
     $form->addInput($defaultThumbnails);
     
     $form->addInput(new Title('customExtendsTitle', NULL, NULL, _t('主题自定义扩展')));

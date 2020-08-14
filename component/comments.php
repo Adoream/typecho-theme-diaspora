@@ -32,7 +32,7 @@ echo $commentClass;
 ?>" id="<?php $comments->theId(); ?>">
 	<div id="div-<?php $comments->theId(); ?>" class="comment-body">
 		<div class="comment-author vcard">
-            <?php $comments->gravatar('40', 'identicon'); ?>
+            <?php $comments->gravatar('40', ''); ?>
             <cite class="fn"><?php $comments->author(); ?></cite>
             <span class="says">说道：</span>
         </div>
@@ -82,7 +82,7 @@ echo $commentClass;
         <p class="comment-form-email">
             <label for="email">电子邮件
             <span class="required">*</span></label>
-            <input id="mail" name="mail" type="text" value="<?php $this->remember('mail'); ?>" size="30" maxlength="100" aria-describedby="email-notes" required="required">
+            <input id="email" name="email" type="text" value="<?php $this->remember('mail'); ?>" size="30" maxlength="100" aria-describedby="email-notes" required="required">
         </p>
         <p class="comment-form-url">
             <label for="url">站点</label>
@@ -100,7 +100,7 @@ echo $commentClass;
     <h2>评论列表</h2>
 
     <?php $comments->listComments(array('avatarSize' => 40, 'replyWord' => _t('回复'))); ?>
-    <?php $comments->pageNav(_t('较新评论'), _t('较旧评论')); ?>
+    <?php $comments->pageNav(_t('上一页'), _t('下一页')); ?>
 </div>
 <?php endif; ?>
 <?php } ?>

@@ -24,12 +24,11 @@
             'category' => $this->category,
             'commentNum' => $this->commentsNum,
             'content' => $this->content,
-            'excerpt' => Content::substring($this->content, 50),
+            'excerpt' => Content::substring($this->content, 100, '...'),
             'cover' => Content::getPostCover($this->cid, $this->fields->coverList),
-            'backcover' => Content::Post0Cover('', $this->fields->cover),
             'views' => Content::postViews($this),
             'strLen' => Content::utf8Strlen($this->content),
-            'likeNum' => Content::likeNum($this->cid)
+            'likeNum' => COntent::likeNum($this->cid)
         ];
     }
 ?>
@@ -37,7 +36,7 @@
     <div id="screen">
         <div id="mark">
             <div class="layer" data-depth="0.4">
-                <img id="cover" crossorigin="anonymous" src="<?php echo $article[0]['backcover'] ?>" width="2500" height="1637"/>
+                <img id="cover" crossorigin="anonymous" src="<?php echo $article[0]['cover'] ?>" width="2500" height="1637"/>
             </div>
         </div>
 
