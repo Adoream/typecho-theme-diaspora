@@ -11,16 +11,16 @@ class Content {
     public static function getPostCover ($cid, $covers = NULL) {
         if (empty($covers)) {
             $imageList = [
-                Diaspora_Const::STATIC_URL . '/Background/10.jpg',
-                Diaspora_Const::STATIC_URL . '/Background/14.png',
-                Diaspora_Const::STATIC_URL . '/Background/18.jpg',
-                Diaspora_Const::STATIC_URL . '/Background/19.jpg',
-                Diaspora_Const::STATIC_URL . '/Background/25.jpg',
-                Diaspora_Const::STATIC_URL . '/Background/27.png',
-                Diaspora_Const::STATIC_URL . '/Background/30.jpg',
-                Diaspora_Const::STATIC_URL . '/Background/36.jpg',
-                Diaspora_Const::STATIC_URL . '/Background/68.png',
-                Diaspora_Const::STATIC_URL . '/Background/70.jpg'
+                Diaspora_Const::REMOTE_STATIC_URL . '/Background/10.jpg',
+                Diaspora_Const::REMOTE_STATIC_URL . '/Background/14.png',
+                Diaspora_Const::REMOTE_STATIC_URL . '/Background/18.jpg',
+                Diaspora_Const::REMOTE_STATIC_URL . '/Background/19.jpg',
+                Diaspora_Const::REMOTE_STATIC_URL . '/Background/25.jpg',
+                Diaspora_Const::REMOTE_STATIC_URL . '/Background/27.png',
+                Diaspora_Const::REMOTE_STATIC_URL . '/Background/30.jpg',
+                Diaspora_Const::REMOTE_STATIC_URL . '/Background/36.jpg',
+                Diaspora_Const::REMOTE_STATIC_URL . '/Background/68.png',
+                Diaspora_Const::REMOTE_STATIC_URL . '/Background/70.jpg'
             ];
             $image = ($covers) ? mb_split("\n", $covers) : (Diaspora::$options->defaultThumbnails) ? mb_split("\n", Diaspora::$options->defaultThumbnails) : $imageList;
             $cid = intval($cid);
@@ -30,7 +30,6 @@ class Content {
 
         return $cover;
     }
-
 
     public static function rankPostMusic ($musicList = NULL) {
         if ($musicList == NULL) {
