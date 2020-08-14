@@ -12,7 +12,7 @@
     if (ceil($this->getTotal() / $this->parameter->pageSize) > $this->_currentPage) {
 ?>
 <div id="pager">
-    <a href="<?php $this->options->siteUrl(); ?>index.php/page/<?php echo (int)($this->_currentPage)+1 ?>/" data-url="<?php $this->options->siteUrl(); ?>index.php/page/<?php echo (int)($this->_currentPage)+1 ?>/" class="more">加载更多</a>
+    <a href="<?php echo (($this->options->rewrite) ? $this->options->siteUrl : $this->options->siteUrl . 'index.php'); ?>/page/<?php echo (int)($this->_currentPage)+1 ?>/" data-url="<?php $this->options->siteUrl(); ?>/page/<?php echo (int)($this->_currentPage)+1 ?>/" class="more">加载更多</a>
 </div>
 <?php 
     }

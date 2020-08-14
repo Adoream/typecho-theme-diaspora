@@ -8,8 +8,8 @@
  * @FilePath: /diaspora/lib/Content.php
  */
 class Content {
-     public static function getPostCover ($cid, $covers = NULL) {
-        if (empty($cover)) {
+    public static function getPostCover ($cid, $covers = NULL) {
+        if (empty($covers)) {
             $imageList = [
                 Diaspora_Const::STATIC_URL . '/Background/10.jpg',
                 Diaspora_Const::STATIC_URL . '/Background/14.png',
@@ -22,74 +22,15 @@ class Content {
                 Diaspora_Const::STATIC_URL . '/Background/68.png',
                 Diaspora_Const::STATIC_URL . '/Background/70.jpg'
             ];
-            $image = ($cover) ? mb_split("\n", $cover) : (Diaspora::$options->defaultThumbnails) ? mb_split("\n", Diaspora::$options->defaultThumbnails) : $imageList;
-            /*后缀是jpg，png，webp丢进background里就能随机调用
-            $staticpath ='/Background';
-			if($cid!=null){
-				$staticpath=$staticpath.'/ContentImage';
-			}
-            $pathroot = $_SERVER['DOCUMENT_ROOT'].$staticpath;
-            $handle = opendir($pathroot);
-			while (false !== ($file = readdir($handle))) {
-				list($filesname,$kzm)=explode(".",$file);
-				if($kzm=="gif" or $kzm=="jpg" or $kzm=="png"  or $kzm=="webp") { 
-				//if($kzm=="gif" or $kzm=="jpg" ) { 
-					if (!is_dir('./'.$file)) { 
-						$arr[]=$file;
-					}
-				}
-			}
-            if(count($arr) == 0) die('没找到图片文件。请先上传一些图片到 '.'/Background/ 文件夹');
-			$cover = $staticpath.'/'.$arr[array_rand($arr)];                     
-			*/
+            $image = ($covers) ? mb_split("\n", $covers) : (Diaspora::$options->defaultThumbnails) ? mb_split("\n", Diaspora::$options->defaultThumbnails) : $imageList;
             $cid = intval($cid);
-            $index = abs($cid) % count($image);
-            $cover = $image[$index];
-        }
-
-        return $covers;
-    }
-	
-	
-	public static function Post0Cover ($cid, $cover = NULL) {
-        if (empty($cover)) {
-            $imageList = [
-                $_SERVER['HTTPS_HOST']. '/Background/1.webp',
-
-            ];
-            $image = ($cover) ? mb_split("\n", $cover) : (Diaspora::$options->defaultThumbnails) ? mb_split("\n", Diaspora::$options->defaultThumbnails) : $imageList;
             $index = abs($cid) % count($image);
             $cover = $image[$index];
         }
 
         return $cover;
     }
-	
 
-    public static function  getfiles($path, $allowFiles = '', $depth = 1, $substart = 0, &$files = array()){
-        $depth--;
-        $path = realpath($path) . '/';
-        $substart = $substart ? $substart : strlen($path);
-
-        if (!is_dir($path)){
-            return false;
-        }
-
-        if($handle = opendir($path)){
-            while (false !== ($file = readdir($handle))) {
-                if ($file != '.' && $file != '..') {
-                    $path2 = $path . $file;
-                    if (is_dir($path2) && $depth > 0){
-                        getfiles($path2, $allowFiles, $depth, $substart, $files);
-                    } elseif (empty($allowFiles) || preg_match($allowFiles, $file)) {
-                        $files[] = substr($path2, $substart);
-                    }
-                }
-            }
-        }
-        sort($files);
-        return $files;
-    }
 
     public static function rankPostMusic ($musicList = NULL) {
         if ($musicList == NULL) {
@@ -103,10 +44,8 @@ class Content {
     }
 
     public static function substring($string, $length, $append = false) {
-        if(mb_strlen($string, 'utf8') > $length) {
-        	return mb_substr($string, 0, $length, 'utf8').'...';
-        } else {
-            return $string;
+        if ( $length <= 0 ) {
+            return '';
         }
         
         // 检测原始字符串是否为UTF-8编码
