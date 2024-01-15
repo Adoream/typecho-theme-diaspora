@@ -1,5 +1,4 @@
-<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-<?php
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 /*
  * @Author: Jin
  * @Date: 2020-03-11 12:19:36
@@ -7,10 +6,17 @@
  * @LastEditTime: 2020-03-12 21:54:05
  * @FilePath: /diaspora/functions.php
  */
+
+$version = Helper::options()->version;
+$componentSuffix = "";
+if ($version >= "1.2.0" && class_exists("Typecho\Widget\Helper\Form\Element")) {
+    $componentSuffix = "_1.2";
+}
+
 require_once("lib/Const.php");
 require_once("lib/Diaspora.php");
 require_once("lib/Settings.php");
-require_once("lib/Title.php");
+require_once("lib/Title${componentSuffix}.php");
 require_once("lib/Content.php");
 
 function themeInit(Widget_Archive $archive) {

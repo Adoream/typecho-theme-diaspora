@@ -11,16 +11,12 @@ class Content {
     public static function getPostCover ($cid, $covers = NULL) {
         if (empty($covers)) {
             $imageList = [
-                Diaspora_Const::REMOTE_STATIC_URL . '/Background/10.jpg',
-                Diaspora_Const::REMOTE_STATIC_URL . '/Background/14.png',
-                Diaspora_Const::REMOTE_STATIC_URL . '/Background/18.jpg',
-                Diaspora_Const::REMOTE_STATIC_URL . '/Background/19.jpg',
-                Diaspora_Const::REMOTE_STATIC_URL . '/Background/25.jpg',
-                Diaspora_Const::REMOTE_STATIC_URL . '/Background/27.png',
-                Diaspora_Const::REMOTE_STATIC_URL . '/Background/30.jpg',
-                Diaspora_Const::REMOTE_STATIC_URL . '/Background/36.jpg',
-                Diaspora_Const::REMOTE_STATIC_URL . '/Background/68.png',
-                Diaspora_Const::REMOTE_STATIC_URL . '/Background/70.jpg'
+                'https://bing.rua.dev/?index=0',
+                'https://bing.rua.dev/?index=1',
+                'https://bing.rua.dev/?index=2',
+                'https://bing.rua.dev/?index=3',
+                'https://bing.rua.dev/?index=4',
+                'https://bing.rua.dev/?index=5',
             ];
             $image = ($covers) ? mb_split("\n", $covers) : (Diaspora::$options->defaultThumbnails) ? mb_split("\n", Diaspora::$options->defaultThumbnails) : $imageList;
             $cid = intval($cid);

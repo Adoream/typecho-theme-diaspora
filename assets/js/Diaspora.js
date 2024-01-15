@@ -270,12 +270,12 @@ let Diaspora = {
     getHitokoto: function () {
         $.ajax({
             type: "GET",
-            url: "https://api.aim.moe/Common/Hitokoto",
+            url: "https://api.rua.dev/hitokoto",
             dataType: "json",
             cache: false,
             success: function (t) {
                 if (t.data) {
-                    $("#hitokoto").html(t.data.text)
+                    $("#hitokoto").html(t.data.hitokoto)
                 } else {
                     $("#hitokoto").html("读取数据失败了的说…… _(:з」∠)_")
                 }

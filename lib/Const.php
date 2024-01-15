@@ -7,8 +7,6 @@
  * @LastEditTime: 2020-08-14 13:21:47
  * @FilePath: /Diaspora/lib/Const.php
  */
-class Diaspora_Const {
-    const REMOTE_STATIC_URL = '//static.misaka.xin';
-    
+class Diaspora_Const {    
     const COMMENT_SYSTEM_EMBED = 0;
 }
