@@ -18,7 +18,7 @@ class Content {
                 'https://bing.rua.dev/?index=4',
                 'https://bing.rua.dev/?index=5',
             ];
-            $image = ($covers) ? mb_split("\n", $covers) : (Diaspora::$options->defaultThumbnails) ? mb_split("\n", Diaspora::$options->defaultThumbnails) : $imageList;
+            $image = ($covers) ? mb_split("\n", $covers) : ((Diaspora::$options->defaultThumbnails) ? mb_split("\n", Diaspora::$options->defaultThumbnails) : $imageList);
             $cid = intval($cid);
             $index = abs($cid) % count($image);
             $cover = $image[$index];
